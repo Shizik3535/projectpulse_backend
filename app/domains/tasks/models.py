@@ -39,8 +39,8 @@ class Task(Base):
     
     # Внешние ключи
     project_id = Column(Integer, ForeignKey('projects.id', ondelete="CASCADE"), nullable=True, default=None)
-    status_id = Column(Integer, ForeignKey('task_status.id'), nullable=False, default=1)
-    priority_id = Column(Integer, ForeignKey('task_priority.id'), nullable=False, default=1)
+    status_id = Column(Integer, ForeignKey('task_statuses.id'), nullable=False, default=1)
+    priority_id = Column(Integer, ForeignKey('task_priorities.id'), nullable=False, default=1)
     
     # Связи
     project = relationship("Project", back_populates="tasks")

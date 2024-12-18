@@ -27,7 +27,7 @@ class Project(Base):
     due_date = Column(Date, nullable=True)
     
     # Внешние ключи
-    status_id = Column(Integer, ForeignKey('project_status.id'), nullable=False, default=1)
+    status_id = Column(Integer, ForeignKey('project_statuses.id'), nullable=False, default=1)
     
     # Связи
     tasks = relationship("Task", back_populates="project")
