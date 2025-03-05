@@ -2,6 +2,9 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
+    """
+    Класс для переменных окружения
+    """
     # База данных
     DB_HOST: str
     DB_PORT: int
